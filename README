@@ -1,4 +1,4 @@
 npm i react-router-dom
 npm install react-hook-form
 npm install @hookform/resolvers
-npm install yup
+npm install yupgi
