@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
+import Formulario from './components/Formulario'
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
     <>
       <Router>
             <Routes>
-                <Route path="/"/>  
+                <Route path="/" element={<Formulario/>}/>  
             </Routes>
         </Router>
     </>
