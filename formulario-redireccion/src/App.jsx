@@ -1,18 +1,21 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
-import Formulario from './components/Formulario'
+import Form from './components/Formulario'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import Login from './components/Login'
 
 function App() {
 
-  return (
-    <>
+  return(
+    <div>
       <Router>
-            <Routes>
-                <Route path="/" element={<Formulario/>}/>  
-            </Routes>
-        </Router>
-    </>
+        <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="/Login" element={<Login />} />
+        </Routes>
+      </Router>
+    </div>
   )
+  
 }
 
 export default App
