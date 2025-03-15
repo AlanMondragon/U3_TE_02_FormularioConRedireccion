@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.perfil-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 500px; /* Mismo tamaño que el Form */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #0D47A1; /* Azul marino */
+}
+
+h1 {
+    font-size: 26px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #002153;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #001F4D;
+    border-bottom: 2px solid #0D47A1;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 8px;
+}
+
+p strong {
+    color: #002153;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #001F4D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003080;
+}
