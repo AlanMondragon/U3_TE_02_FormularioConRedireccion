@@ -6,7 +6,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import './Formulario.css'
 
 
-export default function Formulario() {
+export default function Form() {
 
     let navigate=useNavigate();
 
@@ -19,7 +19,7 @@ export default function Formulario() {
         edad: yup.number().required("requieres una edad").integer().min(18, "debes de tener minimo 18 años").typeError(""),
         pass: yup.string().required("requieres una contraseña").min(4, "al menos 4 caracteres").max(10, "maximo 10 caracteres"),
         confirmpass: yup.string().required("las contraseñas deben de coincidir").oneOf([yup.ref("pass"), null], "Tus contraseñas no son las mismas")
-    }) 
+    })
 
     const {register,handleSubmit, formState:{errors}} = useForm({
         resolver: yupResolver(schema)
@@ -36,43 +36,41 @@ export default function Formulario() {
         navigate("/Login", {state: data})
 
     }
-    
+
 
     return(
-        <div>
+        <div className="form-container">
             <h1>Menú de Registro</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="inputs">
-                <input type="text" placeholder="Nombre"  {...register("name")}
-                />
-                <p>{errors.name?.message}</p>                
-                <input type="text" placeholder="Apellido Paterno" {...register("apellido1")}
-                />
-                <p>{errors.apellido1?.message}</p>
-                <input type="text" placeholder="Apellido Materno" {...register("apellido2")}
-                />
-                <p>{errors.apellido2?.message}</p>
-                <input type="text" placeholder="Número de teléfono" {...register("telefono")}
-                />
-                <p>{errors.telefono?.message}</p>
-                <input type="text" placeholder="email"  {...register("email")}
-                />
-                <p>{errors.email?.message}</p>
-                <input type="number" placeholder="edad" {...register("edad")}
-                />
-                <p>{errors.edad?.message}</p>
-                <input type="password" placeholder="Ingresa la contraseña" {...register("pass")}
-                />
-                <p>{errors.pass?.message}</p>
-                <input type="password" placeholder="Debe de coincidir" {...register("confirmpass")}
-                />
-                <p>{errors.confirmpass?.message}</p>
+                    <input type="text" placeholder="Nombre"  {...register("name")}
+                    />
+                    <p>{errors.name?.message}</p>
+                    <input type="text" placeholder="Apellido Paterno" {...register("apellido1")}
+                    />
+                    <p>{errors.apellido1?.message}</p>
+                    <input type="text" placeholder="Apellido Materno" {...register("apellido2")}
+                    />
+                    <p>{errors.apellido2?.message}</p>
+                    <input type="text" placeholder="Número de teléfono" {...register("telefono")}
+                    />
+                    <p>{errors.telefono?.message}</p>
+                    <input type="text" placeholder="email"  {...register("email")}
+                    />
+                    <p>{errors.email?.message}</p>
+                    <input type="number" placeholder="edad" {...register("edad")}
+                    />
+                    <p>{errors.edad?.message}</p>
+                    <input type="password" placeholder="Ingresa la contraseña" {...register("pass")}
+                    />
+                    <p>{errors.pass?.message}</p>
+                    <input type="password" placeholder="Debe de coincidir" {...register("confirmpass")}
+                    />
+                    <p>{errors.confirmpass?.message}</p>
                 </div>
                 <input type="submit"
                 />
-
             </form>
-
         </div>
     )
 }
