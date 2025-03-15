@@ -17,10 +17,10 @@ body {
     background: white;
     padding: 40px;
     border-radius: 10px;
-    width: 500px; /* Mismo tamaño que el Form */
+    width: 500px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    border: 2px solid #0D47A1; /* Azul marino */
+    border: 2px solid #0D47A1;
 }
 
 h1 {
