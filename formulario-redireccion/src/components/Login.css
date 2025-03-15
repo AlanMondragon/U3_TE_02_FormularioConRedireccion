@@ -17,10 +17,10 @@ body {
     background: white;
     padding: 40px;
     border-radius: 10px;
-    width: 400px; /* Un poco más pequeño */
+    width: 400px; 
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    border: 2px solid #0D47A1; /* Azul marino */
+    border: 2px solid #0D47A1; 
 }
 
 h1 {
@@ -35,7 +35,7 @@ input {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #E3F2FD; /* Azul claro */
+    background-color: #E3F2FD; 
     color: black;
     margin-bottom: 15px;
 }
@@ -54,7 +54,7 @@ input:focus {
 input[type="submit"] {
     width: 100%;
     padding: 14px;
-    background-color: #001F4D; /* Azul oscuro */
+    background-color: #001F4D; 
     color: white;
     font-size: 16px;
     font-weight: bold;
