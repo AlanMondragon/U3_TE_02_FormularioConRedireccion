@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useLocation } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [intentos, setIntentos] = useState(0);
@@ -10,7 +11,9 @@ export default function Login() {
 
     // Usamos useLocation para obtener todos los datos enviados desde el formulario de registro
     const location = useLocation();
-    const formData = location.state;
+    const formData = location.state || {};
+
+    let navigate=useNavigate();
 
     console.log("Datos recibidos del formulario:", formData)
 
@@ -35,6 +38,7 @@ export default function Login() {
             // Dani aca entras tu bro
             console.log("Inicio de sesión exitoso:", data)
             console.log("Todos los datos recibidos del formulario:", formData)
+            navigate("/Perfil", {state: {...formData}})
         } else {
             if (intentos >= 3) {
                 setBtnBloqueado(true)
