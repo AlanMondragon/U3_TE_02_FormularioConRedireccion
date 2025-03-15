@@ -3,7 +3,11 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useLocation } from "react-router-dom";
+<<<<<<< HEAD
 import { Navigate, useNavigate } from "react-router-dom";
+=======
+import './Login.css'
+>>>>>>> b627704e7fce9840f642ebd911b7ab16396f088c
 
 export default function Login() {
     const [intentos, setIntentos] = useState(0);
@@ -18,7 +22,7 @@ export default function Login() {
     console.log("Datos recibidos del formulario:", formData)
 
     // Extraemos los datos que necesitamos (email y contraseña)
-    const correo = formData.email; 
+    const correo = formData.email;
     const contra = formData.pass;
 
     const schema = yup.object().shape({
@@ -49,7 +53,7 @@ export default function Login() {
     }
 
     return (
-        <div>
+        <div className="login-container">
             <h1>Login</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" placeholder="Correo" {...register("email")} />
