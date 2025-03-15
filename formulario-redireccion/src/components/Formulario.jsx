@@ -3,9 +3,10 @@ import { useForm } from "react-hook-form";
 import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Navigate, useNavigate } from "react-router-dom";
+import './Formulario.css'
 
 
-export default function Form() {
+export default function Formulario() {
 
     let navigate=useNavigate();
 
